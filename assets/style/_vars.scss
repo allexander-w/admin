@@ -1,0 +1,77 @@
+$blue: #005ccc;
+$yellow: #ffd740;
+$light-blue: #f1f6fd;
+$black: #333;
+$gray: rgba(#333, .6);
+
+@mixin line-limit($count) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $count;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin icon-button {
+  i {
+    color: $blue;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease;
+
+    &:hover {
+      background-color: rgba($blue, .1);
+    }
+  }
+}
+
+.black {
+  color: $black;
+}
+
+.gray {
+  color: $gray;
+}
+
+.blue {
+  color: $blue;
+}
+
+.text-24 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.text-30 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: normal;
+}
+
+.text-20 {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.text-16 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.btn {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  transition: 0.3s ease-in;
+}
+

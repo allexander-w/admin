@@ -13,31 +13,46 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "preload", as: "font", href: "/fonts/circe.woff2", crossorigin: "true"},
+      { rel: "preload", as: "font", href: "/fonts/fa-light-300.woff2", crossorigin: "true"},
+      { rel: "preload", as: "font", href: "/fonts/fa-regular-400.woff2", crossorigin: "true"},
+      { rel: "preload", as: "font", href: "/fonts/fa-solid-900.woff2", crossorigin: "true"}
     ]
   },
 
   css: [
+    "~/assets/style/index.scss",
+    '@/assets/fs/css/light.min.css',
+    '@/assets/fs/css/solid.min.css',
+    '@/assets/fs/css/regular.min.css',
+    '@/assets/fs/css/fontawesome.min.css',
   ],
 
   plugins: [
+    "@/plugins/editor.client"
   ],
 
   components: true,
 
-  buildModules: [
-  ],
-
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth',
   ],
+
+  buildModules: [
+    '@nuxtjs/style-resources',
+  ],
+
+  styleResources: {
+    scss: ['~/assets/style/_vars.scss']
+  },
 
   auth: {
     redirect: {
       login: "/signin",
-      logout: "/",
-      home: "/"
+      logout: "/signin",
+      home: "/cabinet"
     },
     strategies: {
       local
@@ -49,9 +64,12 @@ export default {
   },
 
   axios: {
-    baseURL: 'https://api.merchant.itl.systems',
+    baseURL: 'http://192.168.9.9/',
   },
 
   build: {
+  },
+  env: {
+    baseURL: 'http://192.168.9.9/',
   }
 }

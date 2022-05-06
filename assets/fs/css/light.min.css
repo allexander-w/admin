@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/fa-light-300.woff2) format("woff2");
+}
+.fal {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300
+}

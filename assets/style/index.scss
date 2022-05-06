@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Circe";
+  src: url("/fonts/circe.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("/fonts/Circe-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #005ccc;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+  font-family: Circe;
+  overflow-x: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: Circe;
+  font-size: 16px;
+  color: $black;
+  font-weight: 500;
+}
+
+body {
+  font-family: Circe;
+  overflow-x: hidden;
+  background-color: $light-blue;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul,
+li {
+  list-style: none;
+  color: $black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  color: $black;
+}
+
+p {
+  color: $black;
+  font-weight: 500;
+}
+
+
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.jc-start {
+  justify-content: start;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.ai-between {
+  align-items: space-between;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.dn {
+  display: none;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-left {
+  text-align: left;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 40 {
+  .mb-#{ $i * 2 } {
+    margin-bottom: #{ $i * 2 }px;
+  }
+}
+
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+@import "./table.scss";
